@@ -10,11 +10,11 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f5f0;
+            background-color: #fff;
             color: #333;
         }
         header {
-            background: #1e1e1e;
+            background: #d3a86b;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -26,12 +26,12 @@
         }
         header p {
             font-size: 16px;
-            color: #d3a86b;
+            color: #fff;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #d3a86b;
+            background: #333;
             padding: 10px 0;
         }
         nav a {
@@ -39,6 +39,9 @@
             margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
+        }
+        nav a:hover {
+            color: #d3a86b;
         }
         .hero {
             text-align: center;
@@ -68,11 +71,9 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
-        .collections a {
-            text-decoration: none;
-            color: #333;
-            text-align: center;
+        .collections div {
             cursor: pointer;
+            text-align: center;
         }
         .collections img {
             width: 100%;
@@ -81,6 +82,7 @@
         }
         .collections h3 {
             margin: 10px 0 5px;
+            color: #333;
         }
         .products {
             display: none;
@@ -92,7 +94,7 @@
         }
         .product-grid div {
             text-align: center;
-            background: white;
+            background: #f8f5f0;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -110,8 +112,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        button:hover {
+            background: #c59759;
+        }
         footer {
-            background: #1e1e1e;
+            background: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -126,12 +131,10 @@
     </style>
 </head>
 <body>
-
 <header>
     <h1>D'Necesa Quarters</h1>
     <p>Confidence & Sophistication in Every Piece</p>
 </header>
-
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About Us</a>
@@ -139,12 +142,10 @@
     <a href="#blog">Blog</a>
     <a href="#contact">Contact Us</a>
 </nav>
-
 <section id="home" class="hero">
     <h1>Welcome to D'Necesa Quarters</h1>
     <p>Your One-Stop Destination for Stylish Jewelry and Bridal Accessories</p>
 </section>
-
 <section id="about">
     <h2>About Us</h2>
     <p>D'Necesa Quarters provides elegant and stylish jewelry for upwardly mobile individuals. Our mission is to inspire confidence and sophistication in every client. Explore our exclusive collections to enhance your personal style.</p>
@@ -217,7 +218,7 @@
         const productsSection = document.getElementById("products");
         productTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
         productGrid.innerHTML = "";
-        products[category].forEach((product) => {
+products[category].forEach((product) => {
             productGrid.innerHTML += `
                 <div>
                     <img src="${product.img}" alt="${product.name}">
@@ -227,7 +228,7 @@
                 </div>
             `;
         });
-    productsSection.style.display = "block";
+  productsSection.style.display = "block";
         window.scrollTo(0, productsSection.offsetTop);
     }
 </script>
