@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D'Necesa Quarters</title>
     <style>
-        /* General Styles */
+        /* General Styling */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background-color: #fdf8f2;
             color: #333;
         }
         header {
@@ -22,11 +22,9 @@
         header h1 {
             margin: 0;
             font-size: 36px;
-            font-weight: bold;
         }
         header p {
             font-size: 16px;
-            color: #fff;
         }
         nav {
             display: flex;
@@ -76,7 +74,6 @@
             gap: 20px;
         }
         .collections div {
-            cursor: pointer;
             text-align: center;
         }
         .collections img {
@@ -85,8 +82,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .collections h3 {
-            margin: 10px 0 5px;
-            color: #333;
+            margin: 10px 0;
         }
         footer {
             background: #333;
@@ -100,6 +96,31 @@
         }
         footer a:hover {
             text-decoration: underline;
+        }
+        .newsletter {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+       .newsletter button {
+            padding: 10px 20px;
+            background: #d3a86b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .newsletter button:hover {
+            background: #333;
         }
     </style>
 </head>
@@ -121,7 +142,9 @@
 </section>
 <section id="about">
     <h2>About Us</h2>
-    <p>D'Necesa Quarters provides elegant and stylish jewelry for upwardly mobile individuals. Our mission is to inspire confidence and sophistication in every client. Explore our exclusive collections to enhance your personal style.</p>
+    <p>D'Necesa Quarters provides young, upwardly mobile individuals and couples with high-quality, stylish jewelry. Our products exude confidence and sophistication while matching personal style and identity.</p>
+    <p><strong>Mission:</strong> To adorn our customers with fine, stylish jewelry that tells their story.</p>
+    <p><strong>Vision:</strong> To be the leading destination for unique jewelry and bridal accessories.</p>
 </section>
 <section id="what-we-do">
     <h2>What We Do</h2>
@@ -160,6 +183,12 @@
 <section id="blog">
     <h2>Our Blog</h2>
     <p>Coming Soon...</p>
+</section>
+<section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get exclusive offers, giveaways, and updates!</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
 </section>
 <section id="contact">
     <h2>Contact Us</h2>
