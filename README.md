@@ -66,6 +66,10 @@
             margin-bottom: 20px;
             text-align: center;
         }
+        .what-we-do {
+            text-align: center;
+            line-height: 1.8;
+        }
         .collections {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -83,37 +87,6 @@
         .collections h3 {
             margin: 10px 0 5px;
             color: #333;
-        }
-        .products {
-            display: none;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .product-grid div {
-            text-align: center;
-            background: #f8f5f0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .product-grid img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #d3a86b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #c59759;
         }
         footer {
             background: #333;
@@ -150,30 +123,39 @@
     <h2>About Us</h2>
     <p>D'Necesa Quarters provides elegant and stylish jewelry for upwardly mobile individuals. Our mission is to inspire confidence and sophistication in every client. Explore our exclusive collections to enhance your personal style.</p>
 </section>
+<section id="what-we-do">
+    <h2>What We Do</h2>
+    <p class="what-we-do">We offer a variety of jewelry products that exude confidence and sophistication, including:</p>
+    <ul class="what-we-do">
+        <li>Earrings</li>
+        <li>Necklaces</li>
+        <li>Engagement & Fashion Rings</li>
+        <li>Bracelets & Bangles</li>
+        <li>Brooches</li>
+        <li>Cufflinks</li>
+        <li>Bridal Accessories</li>
+    </ul>
+</section>
 <section id="collections">
     <h2>Our Collections</h2>
     <div class="collections">
-        <div onclick="showProducts('earrings')">
+        <div>
             <img src="https://via.placeholder.com/300" alt="Earrings">
             <h3>Earrings</h3>
         </div>
-        <div onclick="showProducts('necklaces')">
+        <div>
             <img src="https://via.placeholder.com/300" alt="Necklaces">
             <h3>Necklaces</h3>
         </div>
-        <div onclick="showProducts('rings')">
+        <div>
             <img src="https://via.placeholder.com/300" alt="Rings">
             <h3>Rings</h3>
         </div>
-        <div onclick="showProducts('bracelets')">
+        <div>
             <img src="https://via.placeholder.com/300" alt="Bracelets">
             <h3>Bracelets</h3>
         </div>
     </div>
-</section>
-<section id="products" class="products">
-    <h2 id="product-title"></h2>
-    <div class="product-grid" id="product-grid"></div>
 </section>
 <section id="blog">
     <h2>Our Blog</h2>
@@ -191,46 +173,6 @@
 </section>
 <footer>
     <p>&copy; 2024 D'Necesa Quarters. All Rights Reserved.</p>
-    <p><a href="#home">Back to Top</a></p>
 </footer>
-<script>
-    const products = {
-        earrings: [
-            { name: "Elegant Earrings", price: "$50", img: "https://via.placeholder.com/300" },
-            { name: "Classic Earrings", price: "$40", img: "https://via.placeholder.com/300" },
-        ],
-        necklaces: [
-            { name: "Pearl Necklace", price: "$80", img: "https://via.placeholder.com/300" },
-            { name: "Gold Necklace", price: "$100", img: "https://via.placeholder.com/300" },
-        ],
-        rings: [
-            { name: "Diamond Ring", price: "$150", img: "https://via.placeholder.com/300" },
-            { name: "Wedding Band", price: "$120", img: "https://via.placeholder.com/300" },
-        ],
-        bracelets: [
-            { name: "Gold Bracelet", price: "$70", img: "https://via.placeholder.com/300" },
-            { name: "Charm Bracelet", price: "$60", img: "https://via.placeholder.com/300" },
-        ],
-    };
-    function showProducts(category) {
-        const productGrid = document.getElementById("product-grid");
-        const productTitle = document.getElementById("product-title");
-        const productsSection = document.getElementById("products");
-        productTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-        productGrid.innerHTML = "";
-products[category].forEach((product) => {
-            productGrid.innerHTML += `
-                <div>
-                    <img src="${product.img}" alt="${product.name}">
-                    <h3>${product.name}</h3>
-                    <p>${product.price}</p>
-                    <button onclick="alert('Payment gateway coming soon!')">Buy Now</button>
-                </div>
-            `;
-        });
-  productsSection.style.display = "block";
-        window.scrollTo(0, productsSection.offsetTop);
-    }
-</script>
 </body>
 </html>
