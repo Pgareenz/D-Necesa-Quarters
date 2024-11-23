@@ -105,13 +105,19 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .newsletter input[type="email"] {
+        .newsletter form {
+            margin: 15px 0;
+        }
+        .newsletter input, 
+        .newsletter textarea {
+            width: 90%;
+            max-width: 400px;
+            margin: 10px 0;
             padding: 10px;
-            width: 300px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-       .newsletter button {
+        .newsletter button {
             padding: 10px 20px;
             background: #d3a86b;
             color: white;
@@ -121,6 +127,9 @@
         }
         .newsletter button:hover {
             background: #333;
+        }
+        .newsletter textarea {
+            resize: none;
         }
     </style>
 </head>
@@ -186,9 +195,19 @@
 </section>
 <section class="newsletter">
     <h2>Subscribe to Our Newsletter</h2>
-    <p>Get exclusive offers, giveaways, and updates!</p>
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
+    <p>Get exclusive offers, giveaways, and updates delivered straight to your inbox!</p>
+    <form action="https://formspree.io/f/{your-email-endpoint}" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <h2>Contact Us</h2>
+    <p>Have a question? Send us an inquiry below!</p>
+    <form action="https://formspree.io/f/{your-email-endpoint}" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Inquiry</button>
+    </form>
 </section>
 <section id="contact">
     <h2>Contact Us</h2>
